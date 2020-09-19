@@ -10,6 +10,7 @@ public class Abd {
     System.out.println(inst.schema(true,true,false,false));
 
     }
+    // Выполняет логическую операцию согласно схемы
     boolean schema (boolean a, boolean b, boolean c, boolean d){
         return (a && b) && !(c || d);
     }

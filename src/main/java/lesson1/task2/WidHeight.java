@@ -9,6 +9,7 @@ public class WidHeight {
     System.out.println(inst.rectangle(6,3));
 
     }
+    // Вычисления площади и периметра прямоугольники и сравнения их значений
     boolean rectangle (int width, int height) {
         int s = width * height;
         int p = 2 * width + 2 * height;

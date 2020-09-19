@@ -8,6 +8,7 @@ public class Logic {
     System.out.println(inst.logic(19));
 
     }
+    // Возвращает логическую переменную
     boolean logic (int n) {
         int m = 0;
         if (m == n % 2)

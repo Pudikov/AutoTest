@@ -13,10 +13,11 @@ public class AndB {
     System.out.println(inst.falTr(true,true));
 
     }
+    // Выполняет логическое "или" и инвертирует
     boolean trFal (boolean a, boolean b){
         return !(a || b);
     }
-
+    // Выполняет инвертацию и логическое "и"
     boolean falTr (boolean c, boolean d) {
         return !c && !d;
     }
