@@ -1,8 +1,8 @@
 package lesson1.task4;
 
-public class Metr {
+public class Meter {
     public static void main(String[] args) {
-    Metr inst = new Metr();
+    Meter inst = new Meter();
     System.out.println(inst.metr(115));
     System.out.println(inst.metr(800));
     System.out.println(inst.metr(278));

@@ -1,9 +1,9 @@
 package lesson1.task2;
 
-public class WidHeig {
+public class WidHeight {
      boolean x;
     public static void main(String[] args) {
-    WidHeig inst = new WidHeig();
+    WidHeight inst = new WidHeight();
     System.out.println(inst.rectangle(2,7));
     System.out.println(inst.rectangle(6,5));
     System.out.println(inst.rectangle(6,3));
