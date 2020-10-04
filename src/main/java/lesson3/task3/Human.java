@@ -3,8 +3,7 @@ package lesson3.task3;
 public class Human {
     String name;
     int age;
-    //Human father;
-    //Human mather;
+
     Human[] parents = new Human[2];
 
     public Human(String name, int age, Human father, Human mather) {
@@ -12,7 +11,6 @@ public class Human {
         this.age = age;
         this.parents[0] = father;
         this.parents[1] = mather;
-        //   this.father = father;
-        // this.mather = mather;
+
     }
 }

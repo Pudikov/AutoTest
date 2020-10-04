@@ -30,12 +30,12 @@ public class Application {
 
     }
 // метод для проверки связей
-    // static boolean isAlreadyFriend = false;
+
 
     static boolean isAlFr(Human name1, Human name2) {
         for (Human human : name1.friends)
             if (human == name2) return true;
-return false;
+        return false;
 
 
     }

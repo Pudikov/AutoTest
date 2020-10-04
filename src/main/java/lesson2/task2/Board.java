@@ -1,6 +1,6 @@
 package lesson2.task2;
 
-public class Сhass {
+public class Board {
 
 
     public static void main(String[] args) {
@@ -15,9 +15,9 @@ public class Сhass {
 
         // Вывод на экран FOR
 
-        for (int j = 0; j < board.length; j++) {
+        for (int[] ints : board) {
             for (int i = 0; i < board.length; i++)
-                System.out.print(board[j][i]);
+                System.out.print(ints[i]);
             System.out.println();
 
         }
