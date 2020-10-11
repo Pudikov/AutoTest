@@ -7,66 +7,89 @@ import java.util.regex.Pattern;
 public class Human {
     private String lastName;
     private String firstName;
-    private String birthDate;
-    private String print;
-    private final SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
-    private final Date date = new Date();
-    private final Long millis = date.getTime();
+    private Date birthDate;
+    private final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd.MM.yyyy");
 
 
     public Human() {
     }
 
-    public void setCorrectPrint(String print) {
-        this.print = print;
-        System.out.print(print);
-    }
-
-    public void setIncorrectPrint(String print) {
-        this.print = print;
-        System.out.print(print);
-    }
 
     public void setLastName(String lastName) {
         if (Pattern.matches("[А-Я][а-я]{2,}", lastName)) {
             this.lastName = lastName;
-            setCorrectPrint("Получено значение фамилии: " + lastName);
+            setCorrectPrintLast(lastName);
         } else
-            setIncorrectPrint("Введенное значение некорректно: " + lastName);
+            setIncorrectPrintLast(lastName);
 
     }
 
     public void setFirstName(String firstName) {
+
         if (Pattern.matches("[А-Я][а-я]{2,}", firstName)) {
             this.firstName = firstName;
-            setCorrectPrint("Получено значение имени: " + firstName);
-        } else setIncorrectPrint("Введенное значение некорректно: " + firstName);
+            setCorrectPrintFirst(firstName);
+        } else setIncorrectPrintFirst(firstName);
 
     }
 
-    public Human setBirthDate(String birthDate) {
+    public void setBirthDate(Date birthDate) {
+        Date today = new Date();
+        if (birthDate.before(today)) {
+            this.birthDate = birthDate;
+            setCorrectPrintBirth(simpleDateFormat.format(birthDate));
+        } else setIncorrectPrintBirth(simpleDateFormat.format(birthDate));
+    }
 
-        this.birthDate = birthDate;
-        return this;
+    public void getPrintFirst(String string) {
+        System.out.printf("Получение значения фамилии: %s%n", string);
+    }
+
+    public void getPrintLast(String string) {
+        System.out.printf("Получение значения имени: %s%n", string);
+    }
+
+    public void getPrintBirth(String string) {
+        System.out.printf("Получение значения дня рождения: %s%n", string);
     }
 
     public String getLastName() {
+        getPrintLast(lastName);
         return lastName;
     }
 
     public String getFirstName() {
+        getPrintFirst(firstName);
         return firstName;
     }
 
-    public String getBirthDate() {
+    public Date getBirthDate() {
+        getPrintBirth(simpleDateFormat.format(birthDate));
         return birthDate;
     }
 
-    public String getPrint() {
-        return print;
+    public void setCorrectPrintFirst(String string) {
+        System.out.printf("Установлено корректное значения: %s%n", string);
+
     }
 
+    public void setCorrectPrintLast(String string) {
+        System.out.printf("Установлено корректное значения: %s%n", string);
+    }
 
+    public void setCorrectPrintBirth(String string) {
+        System.out.printf("Установлено корректное значения: %s%n", string);
+    }
+
+    public void setIncorrectPrintFirst(String string) {
+        System.out.printf("Введенное значение некорректно: %s%n", string);
+    }
+
+    public void setIncorrectPrintLast(String string) {
+        System.out.printf("Введенное значение некорректно: %s%n", string);
+    }
+
+    public void setIncorrectPrintBirth(String string) {
+        System.out.printf("Введенное значение некорректно: %s%n", string);
+    }
 }
-
-//  "[А-Я][а-я]{2,}"
