@@ -16,7 +16,7 @@ public class Validator {
         return valid;
     }
 
-    public static void arrayString(String valid) throws ParseException {
+    public static void arraySpace(String valid)  {
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
         String[] world = valid.split("\\s");
@@ -26,7 +26,7 @@ public class Validator {
 
     }
 
-    public static boolean validHuman(Human human) throws ParseException {
+    public static boolean validHuman(Human human)  {
 
         boolean validHuman = human.getFirstName() != null && human.getLastName() != null && human.getBirthDate() != null;
         System.out.println(validHuman);
@@ -34,7 +34,7 @@ public class Validator {
 
     }
 
-    public static boolean validArray(Human[] array) throws ParseException {
+    public static boolean validArray(Human[] array)  {
 
         boolean notNull = true;
         for (Human human : array) {
@@ -51,4 +51,3 @@ public class Validator {
 
 }
 
-//("[A-Za-zА-Яа-я]+\\s[A-Za-zА-Яа-я]+\\s[A-Za-zА-Яа-я]+$");

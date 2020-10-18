@@ -9,19 +9,19 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class Application {
-    private static SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
+    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
 
     public static void main(String[] args) throws IOException, ParseException {
         Human[] humans = new Human[3];
         int index = 0;
-
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String string = reader.readLine();
         while (true) {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-            String string = reader.readLine();
+
 
             Validator.formatString(string);
 
-            Validator.arrayString(string);
+            Validator.arraySpace(string);
 
             String[] world = string.split(" ");
             Human human = new Human();

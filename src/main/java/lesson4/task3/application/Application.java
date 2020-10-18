@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Application {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
 
         ServiceDesk.createTicket("Прошу предоставить справку 2-ндфл за текущий год");
         ServiceDesk.createTicket("Прошу предоставить курьера 2 сентября 2020 года");
