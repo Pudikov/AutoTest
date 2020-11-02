@@ -36,24 +36,3 @@ public enum Lesson {
     }
 }
 
-  /*  ArrayList<String> lesson = new ArrayList<>();
-
-     Random random = new Random();
-
-     int length = random.nextInt(2) + 4;
-
-    Lesson(String name) {
-        this.name= name;
-    }
-
-    public  void generatorLesson() {
-
-        for (int i = 0; i < length; i++) {
-            lesson.add(name);
-
-        }
-        System.out.println(lesson);
-    } */
-
-
-//"Математика", "Физика", "Программирование", "История", "Биология", "География"
